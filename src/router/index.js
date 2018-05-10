@@ -128,14 +128,14 @@ const routes = [
             //     },
             //     component: User
             // },
-            {
-                path: 'about',
-                name: 'about',
-                meta: {
-                    title: '关于'
-                },
-                component: About
-            },
+            // {
+            //     path: 'about',
+            //     name: 'about',
+            //     meta: {
+            //         title: '关于'
+            //     },
+            //     component: About
+            // },
             {
                 path: 'storeInfo',
                 name: 'storeInfo',
