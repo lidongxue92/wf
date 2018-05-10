@@ -124,7 +124,7 @@ export default {
             this.currentIndex = index
             this.getProduct(id)
         },
-        linktoDetail(id) {
+        linktoDetail() {
             this.$router.push({ path: '/page/addgoods'})
         },
         getCategory() {
@@ -334,7 +334,7 @@ export default {
         
     }
     /*添加商品*/
-    .add-goods{position: fixed;top: 50%;right: 20px;width: 80px;height: 80px;border-radius: 50%;background: #ff8134;text-align: center;img{margin-top: 20px;}p{color: #fff;font-size: 12px;}}
+    .add-goods{position: fixed;top: 50%;right: 20px;width: 80px;height: 80px;border-radius: 50%;background: #ff8134;text-align: center;z-index:11;img{margin-top: 20px;}p{color: #fff;font-size: 12px;}}
     
 }
 </style>

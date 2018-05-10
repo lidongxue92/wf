@@ -18,12 +18,12 @@
     </div>
 
   <div class="store_order">
-    <p class="store_ordertext">店铺订单<label>查看更多&nbsp;&gt;</label></p>
+    <p class="store_ordertext">店铺订单<label style="font-weight: normal;">查看更多&nbsp;&gt;</label></p>
     <ul class="store_order_status">
-      <li class="processing"><span class="processing_img"></span><label>进行中</label></li>
-      <li class="carryout"><span class="carryout_img"></span><label>已完成</label></li>
-      <li class="cancel"><span class="cancel_img"></span><label>已取消</label></li>
-      <li class="aftersales"><span class="aftersales_img"></span><label>售后处理</label></li>
+      <li class="processing"><span class="processing_img"></span><label>全部</label></li>
+      <li class="carryout"><span class="carryout_img"></span><label>进行中</label></li>
+      <li class="cancel"><span class="cancel_img"></span><label>已完成</label></li>
+      <li class="aftersales"><span class="aftersales_img"></span><label>已取消</label></li>
     </ul>
   </div>
 
@@ -31,7 +31,7 @@
     <div class="store_management">
       <p class="store_managementtext">店铺管理</p>
       <ul class="store_managementul">
-        <li><i class="store_dianzhang"></i><span class="store_managementli_span">店长信息管理</span><label  class="store_managementli_label">王富贵 &gt;</label></li>
+        <li v-on:click="storeer"><i class="store_dianzhang"></i><span class="store_managementli_span">店长信息管理</span><label  class="store_managementli_label">王富贵 &gt;</label></li>
         <li><i class="store_dianyuan"></i><span class="store_managementli_span">店员管理</span><label  class="store_managementli_label">9人 &gt;</label></li>
       </ul>
     </div>
@@ -43,21 +43,36 @@
 <script>
 
 export default {
-  name: 'shop_center',
-  data () {
-    return {
-
+    name: 'category',
+    data(){
+　　　　　　return {
+　　　　　　　　active: false,
+　　　　　　　　items: [
+　　　　　　　　　　{select:'营销中（29)'},
+　　　　　　　　　　{select:'已下架（39)'},
+　　　　　　　　]
+　　　　　　}
+　　　　},
+    created() {
+        this.getCategory()
+    },
+    computed: {
+        menuBanner() {
+            return this.menu[this.currentIndex].img.url
+        },
+        categoryTitle() {
+            return this.menu[this.currentIndex].name
+        }
+    },
+    methods: {
+        switchCategory(index, id) {
+            this.currentIndex = index
+            this.getProduct(id)
+        },
+        storeer() {
+            this.$router.push({ path: '/page/storeer'})
+        },
     }
-  },
-  mounted () {
-
-  },
-  components: {
-
-  },
-  methods: {
-
-  }
 }
 </script>
 
@@ -253,11 +268,11 @@ export default {
         li{
           flex-grow: 1;
           font-family:PingFangSC-Regular;
-          font-size:1rem;
+          font-size:0.8rem;
           color:#333333;
           letter-spacing:0;
           text-align:center;
-          font-weight:600;
+          font-weight:500;
           span{
             display:block;
             width:30px;
@@ -266,22 +281,22 @@ export default {
             margin:10px auto;
           }
           .processing_img{
-              background:url(~@/assets/icon/jinxingzhong.png) no-repeat
+              background:url(~@/assets/icon/dingdanq.png) no-repeat
                         right center;
               background-size:100% 100%;
             }
           .carryout_img{
-              background:url(~@/assets/icon/wancheng.png) no-repeat
+              background:url(~@/assets/icon/dingdan j.png) no-repeat
                         right center;
               background-size:100% 100%;
             }
           .cancel_img{
-              background:url(~@/assets/icon/quxiao.png) no-repeat
+              background:url(~@/assets/icon/dingdan w.png) no-repeat
                         right center;
               background-size:100% 100%;
           }
           .aftersales_img{
-              background:url(~@/assets/icon/shouhou.png) no-repeat
+              background:url(~@/assets/icon/dingdanquxiao.png) no-repeat
                         right center;
               background-size:100% 100%;
           }

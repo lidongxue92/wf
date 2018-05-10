@@ -19,6 +19,13 @@ const Address = r => require.ensure([], () => r(require('@/pages/address/address
 // const About = r => require.ensure([], () => r(require('@/pages/about/about')), 'about')
 const StoreInfo = r => require.ensure([], () => r(require('@/pages/stores/storeInfo')), 'storeInfo')
 const ShopCenter = r => require.ensure([], () => r(require('@/pages/stores/shopCenter')), 'shopCenter')
+const logo = r => require.ensure([], () => r(require('@/pages/stores/logo')), 'logo')
+const people = r => require.ensure([], () => r(require('@/pages/stores/people')), 'people')
+const shopinfo = r => require.ensure([], () => r(require('@/pages/stores/shopinfo')), 'shopinfo')
+const phone = r => require.ensure([], () => r(require('@/pages/stores/phone')), 'phone')
+const newphone = r => require.ensure([], () => r(require('@/pages/stores/newphone')), 'newphone')
+const phonesuccess = r => require.ensure([], () => r(require('@/pages/stores/phonesuccess')), 'phonesuccess')
+const storeer = r => require.ensure([], () => r(require('@/pages/stores/storeer')), 'storeer')
 
 Vue.use(Router)
 
@@ -151,6 +158,65 @@ const routes = [
                     title: '店铺中心'
                 },
                 component: ShopCenter
+            },
+            {
+                path: 'logo',
+                name: 'logo',
+                meta: {
+                    title: '品牌名称'
+                },
+                component: logo
+            },
+            ,
+            {
+                path: 'people',
+                name: 'people',
+                meta: {
+                    title: '修改负责人'
+                },
+                component: people
+            },
+            {
+                path: 'shopinfo',
+                name: 'shopinfo',
+                meta: {
+                    title: '店铺介绍'
+                },
+                component: shopinfo
+            },
+            {
+                path: 'phone',
+                name: 'phone',
+                meta: {
+                    title: '修改手机号'
+                },
+                component: phone
+            },
+            {
+                path: 'newphone',
+                name: 'newphone',
+                meta: {
+                    title: '修改手机号'
+                },
+                component: newphone
+            }
+            ,
+            {
+                path: 'phonesuccess',
+                name: 'phonesuccess',
+                meta: {
+                    title: '修改手机号成功'
+                },
+                component: phonesuccess
+            }
+            ,
+            {
+                path: 'storeer',
+                name: 'storeer',
+                meta: {
+                    title: '店长管理'
+                },
+                component: storeer
             }
         ]
     },
