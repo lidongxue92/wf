@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+	<input class="input" placeholder="用户名" />
+	<input placeholder="电话" />
+	<input placeholder="邮箱" />
+	<input placeholder="手机号" />
+	<button>提交</button>
+</body>
+	<script>
+		$('button').click(function () {
+			$.ajax(
+				{
+					url:"demo_test.txt",
+					success:function(result){
+        			alert('1');
+    			}
+    		}
+		})
+	</script>
+</html>
