@@ -26,6 +26,8 @@ const phone = r => require.ensure([], () => r(require('@/pages/stores/phone')), 
 const newphone = r => require.ensure([], () => r(require('@/pages/stores/newphone')), 'newphone')
 const phonesuccess = r => require.ensure([], () => r(require('@/pages/stores/phonesuccess')), 'phonesuccess')
 const storeer = r => require.ensure([], () => r(require('@/pages/stores/storeer')), 'storeer')
+const changestore = r => require.ensure([], () => r(require('@/pages/stores/changestore')), 'changestore')
+const shop = r => require.ensure([], () => r(require('@/pages/stores/shop')), 'shop')
 
 Vue.use(Router)
 
@@ -217,6 +219,24 @@ const routes = [
                     title: '店长管理'
                 },
                 component: storeer
+            }
+            ,
+            {
+                path: 'changestore',
+                name: 'changestore',
+                meta: {
+                    title: '更换店长'
+                },
+                component: changestore
+            }
+            ,
+            {
+                path: 'shop',
+                name: 'shop',
+                meta: {
+                    title: '店员管理'
+                },
+                component: shop
             }
         ]
     },

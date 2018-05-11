@@ -50,14 +50,14 @@
                             <img src="~@/assets/img/category-goods.png">
                             <p>适合20-30岁女性</p>
                         </div>
-                        <div class="goods">
+                        <div class="goods clerfix" >
                             <h5>mac/麦可子弹头经典唇膏麦可子弹头经典唇膏</h5>
                             <p><span class="price">￥128.00</span>&ensp;<span class="y-charge">引客价</span>&ensp;<span class="charge">￥188.00</span><a href="javascript:"><img src="~@/assets/icon/goods-left.png"></a></p>
-                            <ul class="list">
+                            <ul class="list fl">
                                 <li>销量 <span>889</span></li>
                                 <li>库存 <span>1890</span></li>
                             </ul>
-                            <ul class="list ml10">
+                            <ul class="list fr">
                                 <li>成交订单 <span>689</span></li>
                                 <li>添加时间 <span>2018/04/28</span></li>
                             </ul>
@@ -269,9 +269,9 @@ export default {
     zoom:1;
 }
 
-.f16{font-size: 0.8rem!important;}
-.ml10{margin-left: 10px;}
-.pb10{padding-bottom:10px;}
+.f16{font-size: 1rem!important;}
+.fl{float: left;}
+.fr{float: right;}
 .bb{border-bottom: 1px solid #ddd;}
 .goods {
     /*顶部样式*/
@@ -285,24 +285,24 @@ export default {
     /*中间样式*/
     .middle{
         line-height: 30px;border-bottom: 1px solid #d2d2d2;background: #fff;
-        li{display: inline-block;width: 49%;text-align: center;padding: 15px 0;span{color: #373737;}}
-        .select span{color: #f64a29;border-bottom: 2px solid #f64a29;padding-bottom:19px;font-weight: 500;}
+        li{display: inline-block;width: 49%;text-align: center;padding: 1rem 0;span{color: #373737;}}
+        .select span{color: #f64a29;border-bottom: 2px solid #f64a29;padding-bottom:1.2rem;font-weight: 500;}
     }
     /*商品数据查询*/
     .nav-list{
         background: #fff;
         .select{color: #f64a29;}
         li{
-            width: 23%;display: inline-block;text-align: center;padding: 15px 0;position: relative;
-            a{position: absolute;margin-left: 10px;img{width: 8px;}}
-            .t{top: 18px;}
-            .d{bottom: 23px;}
+            width: 23%;display: inline-block;text-align: center;padding: 1rem 0;position: relative;font-size:0.9rem;
+            a{position: absolute;margin-left: 0.5rem;img{width: 0.6rem;}}
+            .t{top: 1.3rem;}
+            .d{bottom: 1.3rem;}
         }
     }
     /*商品列表*/
     .goods-list{
-        background: #fff;margin-top: 10px;
-        .t{padding: 30px 20px 10px 20px;}
+        background: #fff;margin-top: 0.8rem;
+        .t{padding: 1.5rem 1rem 1rem 1.5rem;}
         .goods-img{
             position: relative;width:30%;display: inline-block;vertical-align:top;img{width: 100%;}
             p{position: absolute;bottom: 0;background: rgba(153,153,153,.7);text-align: center;line-height: 25px;color: #fff;font-size: 10px;width: 100%;}
@@ -327,14 +327,14 @@ export default {
             li{
                 width: 23%;display: inline-block;margin-top: 15px;font-size: 0.8rem;
                 p{text-align: center;}
-                img{width: 14px;}
+                img{width: 1rem}
             }
         }
         /*添加商品*/
         
     }
     /*添加商品*/
-    .add-goods{position: fixed;top: 50%;right: 20px;width: 80px;height: 80px;border-radius: 50%;background: #ff8134;text-align: center;z-index:11;img{margin-top: 20px;}p{color: #fff;font-size: 12px;}}
+    .add-goods{position: fixed;top: 70%;right: 1rem;width: 5rem;height:5rem;border-radius: 50%;background: #ff8134;text-align: center;z-index:11;img{margin-top: 1rem;}p{color: #fff;font-size: 0.9rem;}}
     
 }
 </style>

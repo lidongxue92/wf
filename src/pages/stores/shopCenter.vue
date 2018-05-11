@@ -32,7 +32,7 @@
       <p class="store_managementtext">店铺管理</p>
       <ul class="store_managementul">
         <li v-on:click="storeer"><i class="store_dianzhang"></i><span class="store_managementli_span">店长信息管理</span><label  class="store_managementli_label">王富贵 &gt;</label></li>
-        <li><i class="store_dianyuan"></i><span class="store_managementli_span">店员管理</span><label  class="store_managementli_label">9人 &gt;</label></li>
+        <li v-on:click="shop"><i class="store_dianyuan"></i><span class="store_managementli_span">店员管理</span><label  class="store_managementli_label">9人 &gt;</label></li>
       </ul>
     </div>
     <p class="help_center">帮助中心</p>
@@ -72,6 +72,9 @@ export default {
         storeer() {
             this.$router.push({ path: '/page/storeer'})
         },
+        shop() {
+            this.$router.push({ path: '/page/shop'})
+        }
     }
 }
 </script>

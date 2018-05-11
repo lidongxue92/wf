@@ -1,26 +1,25 @@
 <template>
-    <div class="store">
-    <!-- 顶部数据 -->
-          <div class="top clearfix" v-on:click="linktoDetail">
-            <div class="fl left"><img  src="~@/assets/icon/add.png"></div>
-            <div class="fl right">
-              <h5>更换新店长<img class="icon" src="~@/assets/icon/goods-left.png" /></h5>
-              <p>新店长账号添加成功后，当前店长账号将立即失效</p>
-            </div>
+  <div class="store">
+  <!-- 顶部数据 -->
+        <div class="top clearfix" v-on:click="linktoDetail">
+          <div class="fl left"><img  src="~@/assets/icon/add.png"></div>
+          <div class="fl right">
+            <h5>添加新店员<img class="icon" src="~@/assets/icon/goods-left.png" /></h5>
+            <p>店员账号添加成功后，店员登录后激活</p>
           </div>
-          <div class="middle">
-            <ul>
-              <li>
-                <span class="fl">负责人</span>
-                <span class="fr">王富贵&emsp;<img src="~@/assets/icon/goods-left.png"></span>
-              </li>
-              <li>
-                <span class="fl">修改手机号</span>
-                <span class="fr">152****8765&emsp;<img src="~@/assets/icon/goods-left.png"></span>
-              </li>
-            </ul>
-          </div>
-    </div>
+        </div>
+        <div class="middle">
+          <table>
+            <tbody>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  </div>
 </template>
 
 <script>
@@ -30,16 +29,8 @@ export default {
     name: 'category',
     data(){
 　　　　　　return {
-　　　　　　　　active: false,
-　　　　　　　　items: [
-　　　　　　　　　　{select:'营销中（29)'},
-　　　　　　　　　　{select:'已下架（39)'},
-　　　　　　　　]
 　　　　　　}
 　　　　},
-    created() {
-        this.getCategory()
-    },
     computed: {
         menuBanner() {
             return this.menu[this.currentIndex].img.url
